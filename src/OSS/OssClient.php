@@ -93,6 +93,8 @@ use OSS\Result\GetBucketCnameTokenResult;
 class OssClient
 {
 
+    private $accessKeyId = '';
+
     /**
      * OssClient constructor.
      */
@@ -143,6 +145,7 @@ class OssClient
             'request_proxy'         => $requestProxy,
             'provider'              => $provider
         );
+        $this->accessKeyId = $accessKeyId;
         $this->__initNewClient($config);
     }
 
